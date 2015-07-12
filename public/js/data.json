@@ -3,23 +3,35 @@
       "data": [
       {
         "artist":"Lindsey Stirling",
-        "time":110
+        "time":37
       },
       {
         "artist":"Mumford & Sons",
-        "time":2384
+        "time":45
       },
       {
         "artist":"RL Grime",
-        "time":7951
+        "time":28
       },
       {
         "artist":"Porter Robinson",
-        "time":3951
+        "time":60
       },
       {
-        "artist":"Other",
-        "time":691
+        "artist":"Chet Faker",
+        "time":53
+      },
+      {
+        "artist":"Iration",
+        "time":10
+      },
+      {
+        "artist":"The Drums",
+        "time":33
+      },
+      {
+        "artist":"The Sam Chase",
+        "time":3
       }
     ],
     "day":"1"
@@ -50,15 +62,31 @@
      "data": [
       {
         "artist":"Sam Smith",
-        "time":8082
+        "time":60
       },
       {
         "artist": "Elton John",
-        "time": 916
+        "time": 21
+      },
+      {
+        "artist": "Nate Ruess",
+        "time": 21
+      },
+      {
+        "artist": "DJ Mustard",
+        "time": 5
+      },
+      {
+        "artist": "Get Real",
+        "time": 42
+      },
+      {
+        "artist": "Caribou",
+        "time": 19
       },
       {
         "artist": "ODESZA",
-        "time":848
+        "time":55
       }
     ],
     "day":"3"
