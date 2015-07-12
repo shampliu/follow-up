@@ -19,7 +19,7 @@
 
 $(document).ready( function(){
 var w = 650;
-var h = 400;
+var h = 350;
 var r = 150;
 var ir = 90;
 var textOffset = 24;
@@ -304,11 +304,12 @@ $( "#slider" ).slider({
   
   // Get the number of possible values
   var vals = opt.max - opt.min;
-  
+  var days = ["Friday", "Sat.", "Sunday"];
+
   // Space out values
   for (var i = 0; i <= vals; i++) {
-    var el = $('<label>'+dataStructure[i].day+'</label>').css('left',(i/vals*100)+'%');
-  
+    // var el = $('<label>'+dataStructure[i].day+'</label>').css('left',(i/vals*100)+'%');
+    var el = $('<label>'+ days[i] +'</label>').css('left',(i/vals*100)+'%');
     $( "#slider" ).append(el);
   }
   
