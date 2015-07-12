@@ -1,0 +1,8 @@
+"user1ArtistInfo":[
+    {"artist":"Kanye West", "time":"40"},
+    {"artist":"Kendrick Lamar", "time":"50"},
+    {"artist":"HEATWAVE","time":"60"}
+]
+
+
+// time in rounded minutes (round down), artist must match exactly from lineup.json
