@@ -46,7 +46,7 @@ var donut = d3.layout.pie().value(function(d){
 });
 
 //D3 helper function to create colors from an ordinal scale
-var color = d3.scale.category20c();
+var color = d3.scale.category20();
 
 //D3 helper function to draw arcs, populates parameter "d" in path object
 var arc = d3.svg.arc()
