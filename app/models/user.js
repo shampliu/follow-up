@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var UserSchema = new Schema({
 	fb : Object, 
 	accessToken : String, 
+	data : Array
 }, { 
 	// minimize: false
 });

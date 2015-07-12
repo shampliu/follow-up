@@ -1,0 +1,69 @@
+[
+   {
+      "data": [
+      {
+        "artist":"Kanye West",
+        "time":110
+      },
+      {
+        "artist":"Sam Smith",
+        "time":8082
+      },
+      {
+        "artist": "Elton John",
+        "time": 916
+      },
+      {
+        "artist":"Kendrick Lamar",
+        "time":4222
+      },
+      {
+        "artist":"Other",
+        "time":691
+      }
+    ],
+    "day":"1"
+  },
+  {
+     "data": [
+      {
+        "artist":"Kanye West",
+        "time":116
+      },
+      {
+        "artist":"RL Grime",
+        "time":7951
+      },
+      {
+        "artist": "ODESZA",
+        "time":848
+      },
+      {
+        "artist":"Mumford & Sons",
+        "time":2384
+      }
+    ],
+     "day":"2"
+   },
+   {
+     "data": [
+      {
+        "artist":"Kanye West",
+        "time":107
+      },
+      {
+        "artist":"Disclosure",
+        "time":7777
+      },
+      {
+        "artist": "Soulja Boy",
+        "time":817
+      },
+      {
+        "artist":"Fly Lo",
+        "time":1945
+      }
+    ],
+    "day":"3"
+  }
+]

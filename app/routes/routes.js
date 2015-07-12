@@ -21,7 +21,7 @@ module.exports = function(app) {
 
 	var url; 
 	if (process.env.NODE_ENV === 'development') {
-		url = "http://localhost:8080/auth/facebook/callback";
+		url = "http://localhost:8081/auth/facebook/callback";
 	}
 	else {
 		url = "/auth/facebook/callback"
@@ -84,10 +84,9 @@ module.exports = function(app) {
 
 	app.get('/', function(req, res) {
 		if (req.user) {
-			res.render('main.html');
+			res.render('main.ejs');
 		}
 		else {
-			console.log("= NO USER FOUND");
 			res.render('login.html')
 		}
 	});
@@ -98,12 +97,17 @@ module.exports = function(app) {
 
 	  });
 
+	app.get('/artist/:id', function(req, res) {
+
+
+	})
+
 	
 
 	app.get('/main', function(req, res) {
 		console.log(req.user);
 		// if (req.user) {
-			res.render('main.html');
+			res.render('main.ejs');
 		// }
 		// else {
 		// 	res.render('login.html')

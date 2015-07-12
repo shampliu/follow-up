@@ -1,0 +1,128 @@
+#banner-container {
+  background: url('https://download.unsplash.com/photo-1428263197823-ce6a8620d1e1');
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 4em;
+  margin-bottom:45px;
+}
+.ui.text.container {
+  max-width: 950px !important;
+}
+
+div.ui.borderless.main.menu {
+  background-color: transparent;
+}
+.ui.borderless.main.menu.fixed {
+  background-color: white;
+}
+
+.main.menu {
+  /*margin-top: 0em;*/
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  transition:
+    box-shadow 1s ease-in-out,
+    padding 1s ease-in-out,
+    background 0.25s ease-in-out
+  ;
+}
+.main.menu .item img.logo {
+  margin-right: 1.5em;
+}
+.navbar {
+  box-shadow: 1px 1px whitesmoke;
+  background-color: white;
+  padding: 10px;
+  border-radius:50px;
+  margin-bottom:-40px;
+}
+
+// end semantic
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  font-weight: 300;
+}
+
+.legend {
+  font-size: 12px;
+}
+
+rect {
+  stroke-width: 2;
+}
+
+#pie-chart {
+  background-color: #ffffff;
+  /*border: 1px solid gray;*/
+  font: 10px sans-serif;
+  height: 400px;
+  text-shadow: none;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#pie-chart .total {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#pie-chart .units {
+  fill: gray;
+  font-size: 12px;
+}
+
+#pie-chart .label {
+  fill: #CCC;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#pie-chart .value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#slider label {
+  position: absolute;
+  width: 20px;
+  /*margin-left: -20px;*/
+  margin-left: -12px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.tooltip {
+  position: absolute;
+  /*width: 100px; */
+  height: 30px;
+  padding: 6px;
+  font: 12px sans-serif;
+  /*background: green; */
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  /*border-radius: 8px;*/
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+.tooltip .left {
+  display: inline-block;
+  float: left;
+  padding-right: 5px;
+  border-right: 1px dotted rgba(0, 0, 0, 0.4);
+}
+
+.tooltip .right {
+  font-size: 2em;
+  padding-left: 5px;
+  display: inline-block;
+  float: right;
+}
