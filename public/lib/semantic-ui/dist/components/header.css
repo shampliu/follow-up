@@ -24,7 +24,7 @@
   font-weight: bold;
   line-height: 1.2857em;
   text-transform: none;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.87); /*follow up title */
 }
 .ui.header:first-child {
   margin-top: -0.14285em;
@@ -172,6 +172,7 @@ h5.ui.header .sub.header {
   font-size: 2em;
 }
 .ui.large.header {
+  color:white;
   font-size: 1.714em;
 }
 .ui.medium.header {

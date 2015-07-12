@@ -43,7 +43,7 @@
       .masthead .ui.menu .ui.button {
         margin-left: 0.5em;
       }
-      .masthead h1.ui.header {
+      .masthead h1.ui.header {        /*FOLLOW UP TITLE*/
         margin-top: 3em;
         margin-bottom: 0em;
         font-size: 4em;
@@ -156,7 +156,7 @@
 
 <!-- Page Contents -->
 <div class="pusher">
-  <div class="ui vertical masthead center aligned segment" style="background:url('https://download.unsplash.com/photo-1427955569621-3e494de2b1d2'); background-size: cover;">
+  <div class="ui vertical masthead center aligned segment" style="background:url('assets/loginbackground.jpg'); background-size: cover;">
 
     <div class="ui container">
       <div class="ui large secondary pointing menu">
@@ -168,10 +168,24 @@
       </div>
     </div>
 
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+      <div class="sixteen wide column">
+      <img id="logo" src="assets/FollowUP LOGO.png">
+      <style>
+        img#logo{
+          opacity:.5;
+          padding-top: 175px;
+        }
+      </style>
+      </div>
+      </div>
+      </div>
+
     <div class="ui text container">
-        <h1 class="ui header">
+        <!-- <h1 class="ui header">
             Follow Up
-        </h1>
+        </h1> -->
 
         <h2></h2>
         <form action="/auth/facebook">
