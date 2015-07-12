@@ -104,7 +104,8 @@ var center_group = vis.append("svg:g")
 //WHITE CIRCLE BEHIND LABELS
 var whiteCircle = center_group.append("svg:circle")
   .attr("fill", "white")
-  .attr("r", ir);
+  .attr("r", ir)
+  .style.backgroundImage = "url('assets/geazy.jpg')";
 
 // to run each time data is generated
 function update(number) {
@@ -166,6 +167,8 @@ function update(number) {
           .style("top", (d3.event.pageY-10) + "px")
           .style("opacity", 1)
           .style("display","block")
+        .center-circle
+          .style(d.data["artist"])    //CHANGED HERE
       })
       .on("mouseover", function(d) {
                     d3.select(this).transition()

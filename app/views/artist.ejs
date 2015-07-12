@@ -17,11 +17,38 @@
     <link rel="stylesheet" href="/lib/semantic-ui/dist/semantic.min.css">
     <script src="/js/artist-ng.js"></script>
 
+    <!--FOR CAROUSEL --> 
+    <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
+  	<script src="/js/script.js"></script>
 
-
+    <style>
+    	body{
+    		background-color:black;
+    	}
+    	h1{
+    		color:white;
+    		padding-top: 10px;
+    		padding-bottom:10px;
+    	}
+    </style>
 
 </head>
 <body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist); getEvents(artist);">
+	<div class="ui left aligned stackable grid container">
+    	<div class="row">
+    		<div class="three wide left column">
+    			<img src="../assets/sam smith.png">
+    		</div>
+    		<div class="thirteen wide left floated column">
+    			<img src="../assets/Sam.png">
+    		</div>
+
+			<!-- <div class="ui text container">
+				<h1>{{ artist }}</h1>
+			</div> -->
+    	</div>
+	</div>
 	<div id="banner-container">
 
 		
@@ -143,7 +170,39 @@
 		</div> -->
 		
 	</div>
-	
+	</div>
+
+	<style>
+		h1{
+			color:rgb(230, 85, 13);;
+			font-size: 300%;
+			text-align: center;
+		}
+		hr{
+			color:white;
+			/*padding-bottom: 5px;*/
+		}
+	</style>
+	<div class="ui vertical stripe segment">
+		<div class="ui text container">
+    			<h1> MERCH </h1>
+    	</div>
+    	<hr>
+    	<div class="ui middle aligned stackable grid container">
+    		<div class="row">
+			  <div class="your-class">
+			    <div><img src="../assets/bannermusic.jpg"></div>
+			    <div><img src="../assets/Fabicon.jpg"></div>
+			    <div><img src="../assets/merch.jpg"></div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+
 
 </body>
 
