@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/artist.css">
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="/lib/semantic-ui/dist/semantic.min.css">
     <script src="/js/artist-ng.js"></script>
@@ -21,20 +22,9 @@
     <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
   	<link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
   	<script src="/js/script.js"></script>
-
-    <style>
-    	body{
-    		/*color:white;
-    		background-color:black;*/
-    	}
-    	h1{
-    		color:white;
-    		padding-top: 10px;
-    		padding-bottom:10px;
-    	}
-    </style>
-
+  	<link rel="stylesheet" href="css/masterStyle.css">
 </head>
+
 <body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist); getEvents(artist);">
 	
 	<div id="banner-container">
