@@ -304,7 +304,7 @@ $( "#slider" ).slider({
   
   // Get the number of possible values
   var vals = opt.max - opt.min;
-  var days = ["Friday", "Sat.", "Sunday"];
+  var days = ["Day 1", "Day 2", "Day 3"];
 
   // Space out values
   for (var i = 0; i <= vals; i++) {
