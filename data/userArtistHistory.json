@@ -1,8 +1,25 @@
-"user1ArtistInfo":[
-    {"artist":"Kanye West", "time":"40"},
-    {"artist":"Kendrick Lamar", "time":"50"},
-    {"artist":"HEATWAVE","time":"60"}
-]
+var userArtists = [
+	"Aylan":[
+		{"artist":"Kanye West","time":60}, 
+		{"artist":"Elton John","time":50},
+		{"artist":"Kenrdick Lamar","time":40}
+	],
+	"Chang":[
+		{"artist":"Hot Chip","time":60}, 
+		{"artist":"G-Eazy","time":50},
+		{"artist":"RL Grime","time":40}
+	],
+	"Jackie":[
+		{"artist":"Slightly Stoopid","time":60}, 
+		{"artist":"Glass Animals","time":50},
+		{"artist":"The Drums","time":40}
+	],
+	"Kristen":[
+		{"artist":"SZA","time":60}, 
+		{"artist":"Cold War Kids","time":50},
+		{"artist":"Toro Y Moi","time":40}
+	]
 
+]
 
 // time in rounded minutes (round down), artist must match exactly from lineup.json

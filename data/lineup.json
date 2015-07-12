@@ -1,4 +1,29 @@
+"artists":[{
+	{"artist":"Kanye West","stage":
+
+
+}]
+
+//artists in stages
+// date is split up between 1,2,3, for aug 7, 8, 9
+"land's end":[
+	{"artist":"Kanye West", "date":"1", "start":"20:00", "end":"21:00"}
+
+]
+
+
+
+
+
+
 /*
+
+
+stages:
+
+land's end, sutro, twin peaks, panhandle
+
+
 DAY, AUG. 7
 Mumford & Sons
 Wilco
