@@ -1,4 +1,10 @@
+h1{
+  color: white;
+}
 
+text{
+  color: white;
+}
 
 #banner-container {
   background: url('../assets/bannermusic.jpg');
@@ -43,11 +49,12 @@ div.ui.borderless.main.menu {
 
 // end semantic
 
-body {
+body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   position: relative;
   font-weight: 300;
+  background-color: black;
 }
 
 .legend {
