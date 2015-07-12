@@ -7,10 +7,14 @@
     <title>Follow Up</title>
     <!-- <link rel="shortcut icon" href="img/logo.png"> -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/item.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/card.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/grid.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="/lib/semantic-ui/dist/semantic.min.css">
     <script src="/js/artist-ng.js"></script>
+
 
 
 </head>
@@ -19,6 +23,39 @@
 	<div class="ui text container">
 		<h1>{{ artist }}</h1>
 	</div>
+	<div class="ui text container">
+		<div class="ui link three cards" >
+		  <div class="card" ng-repeat="person in similarArtists.similarartists.artist | limitTo: 9">
+		    <a href="http://{{ person.url }}" class="image" style="overflow:hidden;">
+		      <img src="{{ person.image[3]['#text'] }}" style="height: 200px;">
+		    </a>
+			    <div class="content">
+			      <div class="header">{{ place.name }}</div>
+			      <div class="meta">
+			        <p>{{ person.name }}</p>
+			      </div>
+			      <div class="description">
+			        Match: <b>{{ toPercent(person.match) }}%</b>
+			      </div>
+			    </div>
+		  </div>		  
+		</div>
+		<!-- <div class="ui items">
+		  <div class="item" ng-repeat="person in similarArtists.similarartists.artist | limitTo: 10">
+		    <a class="ui tiny image">
+		      <img src="{{ person.image[1]['#text'] }}">
+		    </a>
+		    <div class="content">
+		      <a class="header"> {{ person.name }} </a>
+		      <div class="description">
+		        <p> {{ person.match * 100 }}%</p>
+		      </div>
+		    </div>
+		  </div>
+		</div> -->
+		
+	</div>
+	
 
 </body>
 
