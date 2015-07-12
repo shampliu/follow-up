@@ -8,6 +8,7 @@ var passport = require('passport'),
 var User = mongoose.model('User');
 
 
+
 // Define the routes module' method
 module.exports = function(app) {
 
@@ -34,7 +35,6 @@ module.exports = function(app) {
 	    enableProof: false
 	  },
 	  function(accessToken, refreshToken, profile, done) {
-	  	console.log(profile);
 	  	User.findOne({ 'fb.id': profile.id }, function (err, user) {
 	  		if (err) {
 	  			return next(err); 	
@@ -43,7 +43,8 @@ module.exports = function(app) {
 	  			if (! user) {
 	  				var newUser = new User({
 	  					fb : profile,
-	  					accessToken : accessToken
+	  					accessToken : accessToken,
+	  					data : []
 	  				});
 	  				
 	  				newUser.save(function(err) {
@@ -97,15 +98,6 @@ module.exports = function(app) {
 
 	  });
 
-	app.get('/artist/:name', function(req, res) {
-		// res.send('hi!' + req.params.name);
-		res.render('artist.ejs', {
-			artist: req.params.name
-		})
-
-
-	})
-
 	
 
 	app.get('/main', function(req, res) {
@@ -117,6 +109,16 @@ module.exports = function(app) {
 		// 	res.render('login.html')
 		// }
 	});
+
+	
+	app.get('/artist/:name', function(req, res) {
+		// res.send('hi!' + req.params.name);
+		res.render('artist.ejs', {
+			artist: req.params.name
+		})
+
+
+	})
 
 	app.get('/api/loginInfo', function(req, res) {
 		User.findOne({ 'fb.id' : req.user.id }, function(err, user) {
@@ -142,5 +144,7 @@ module.exports = function(app) {
 			res.json(users);
 		});
 	});
+
+
 
 };

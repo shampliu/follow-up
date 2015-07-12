@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Follow Up</title>
-    <!-- <link rel="shortcut icon" href="img/logo.png"> -->
+    <link rel="shortcut icon" href="/img/assets/logo.png">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/item.min.css">
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/card.min.css">
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/grid.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/artist.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="/lib/semantic-ui/dist/semantic.min.css">
     <script src="/js/artist-ng.js"></script>
@@ -22,7 +24,8 @@
 
     <style>
     	body{
-    		background-color:black;
+    		/*color:white;
+    		background-color:black;*/
     	}
     	h1{
     		color:white;
@@ -31,26 +34,101 @@
     	}
     </style>
 
-
 </head>
-<body>
-	<div ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist);"> 
-	<div class="ui left aligned stackable grid container">
-    	<div class="row">
-    		<div class="three wide left column">
-    			<img src="../assets/sam smith.png">
-    		</div>
-    		<div class="thirteen wide left floated column">
-    			<img src="../assets/Sam.png">
-    		</div>
+<body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist); getEvents(artist);">
+	
+	<div id="banner-container">
 
-			<!-- <div class="ui text container">
-				<h1>{{ artist }}</h1>
-			</div> -->
-    	</div>
+		<div class="ui borderless secondary menu">
+		  <div class="ui text container navbar">
+		    <div href="#" class="header item">
+		      <img class="logo" src="/img/assets/logo.png">
+		      &nbsp; Follow Up
+		    </div>
+		    <a href="/" class="item">Home</a>
+		    <a href="/main" class="item">Stats</a>
+		    <div class="right menu">
+		      <div class="ui item">
+		        {{ user.fb.displayName }}
+		      </div>
+		    </div>
+		  </div>
+		</div>
 	</div>
+	
+	<h2 class="ui center aligned icon header" style="margin-top:75px; margin-bottom: 30px;">
+		<!-- <img src="../img/assets/sam smith.png" style="height:200px; width: 200px;"> -->
+	  <!-- <i class="circular users icon"></i> -->
+	  <div class="three wide left column">
+			<img src="../img/assets/sam smith.png">
+		</div>
+
+	  <h1 style="text-align: center; margin-top: -50px;">{{ artist }}</h1>
+	</h2>
 
 	<div class="ui text container">
+		<h2 class="ui header">
+			<i class="sound icon"></i>
+		  <!-- <img src="/images/icons/plugin.png"> -->
+		  <div class="content">
+		    Discography
+		    <div class="sub header"></div>
+		  </div>
+		</h2>
+		<p>asdf</p>
+		<h2 class="ui header">
+			<i class="calendar icon"></i>
+		  <!-- <img src="/images/icons/plugin.png"> -->
+		  <div class="content">
+		    Upcoming Events
+		    <div class="sub header"></div>
+		  </div>
+		</h2>
+		<div class="ui">
+			<div class="ui list" ng-repeat="event in events.events.event | limitTo: 5" style="border-bottom: 1px solid whitesmoke; padding-bottom: 10px;">
+				<div class="item">
+				  <i class="info circle icon"></i>
+				  <div class="content">
+				    {{ event.title }}
+				  </div>
+				</div>
+				<div class="item">
+				  <i class="alarm outline icon"></i>
+				  <div class="content">
+				    {{ event.startDate }}
+				  </div>
+				</div>
+				<div class="item">
+			    <i class="marker icon"></i>
+			    <div class="content">
+			      {{ event.venue.location.city }}, {{ event.venue.location.country }}
+			    </div>
+			  </div>
+			  <div class="item">
+			    <i class="users icon"></i>
+			    <div class="content">
+			    	<button class="ui small button" style="padding: 6px; margin-right: 4px; margin-bottom: 5px;" ng-repeat="person in event.artists.artist | limitTo: 10;">
+			    	  {{ person }}
+			    	</button>
+			      
+			    </div>
+			  </div>
+			  <div class="item">
+			    <i class="linkify icon"></i>
+			    <div class="content">
+			      <a href="{{ event.website }}">{{ event.website }}</a>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<h2 class="ui header">
+			<i class="idea icon"></i>
+		  <!-- <img src="/images/icons/plugin.png"> -->
+		  <div class="content">
+		    Artist Recommendations
+		    <div class="sub header">Check out similar artists who might fit your taste</div>
+		  </div>
+		</h2>
 		<div class="ui link three cards" >
 		  <div class="card" ng-repeat="person in similarArtists.similarartists.artist | limitTo: 9">
 		    <a href="http://{{ person.url }}" class="image" style="overflow:hidden;">

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Follow Up</title>
-    <!-- <link rel="shortcut icon" href="img/logo.png"> -->
+    <link rel="shortcut icon" href="img/assets/logo.png">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -22,20 +22,17 @@
 	<!-- <div id="center-circle" style="width:180px; height:180px; background-image:url(../assets/kendrickLamar.png); border-radius: 100px; position: absolute; top: 303px; left:525px;"></div> -->
 	<div id="banner-container">
 
-		
-
-
 		<div class="ui borderless secondary menu">
 		  <div class="ui text container navbar">
 		    <div href="#" class="header item">
-		      <img class="logo" src="assets/Fabicon.jpg">
-		      FollowUp
+		      <img class="logo" src="img/assets/logo.png">
+		      &nbsp; Follow Up
 		    </div>
 		    <a href="#" class="item">Home</a>
 		    <a href="#" class="item">Stats</a>
 		    <div class="right menu">
 		      <div class="ui item">
-		        User Name
+		        {{ user.fb.displayName }}
 		      </div>
 		    </div>
 		  </div>
