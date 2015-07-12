@@ -24,13 +24,23 @@
 
     <style>
     	body{
-    		/*color:white;
-    		background-color:black;*/
+    		background: rgba(255, 237, 216, 0.22);
+    		/*background: rgb(248, 237, 223);;*/
+    	}
+    	#main-container {
+    		background: white;
+    		/*background: rgba(255, 237, 216, 0.22);*/
+    		padding: 30px;
+    		max-width: 900px!important;
     	}
     	h1{
+    		color:rgb(230, 85, 13);;
+    		font-size: 300%;
+    		text-align: center;
+    	}
+    	hr{
     		color:white;
-    		padding-top: 10px;
-    		padding-bottom:10px;
+    		/*padding-bottom: 5px;*/
     	}
     </style>
 
@@ -66,7 +76,7 @@
 	  <h1 style="text-align: center; margin-top: -50px;">{{ artist }}</h1>
 	</h2>
 
-	<div class="ui text container">
+	<div class="ui text container" id="main-container">
 		<h2 class="ui header">
 			<i class="sound icon"></i>
 		  <!-- <img src="/images/icons/plugin.png"> -->
@@ -158,36 +168,19 @@
 		    </div>
 		  </div>
 		</div> -->
-		
+  	<h1> MERCH </h1>
+  	<hr>
+  	<div class="ui middle aligned stackable grid container">
+  		<div class="row">
+		  <div class="your-class">
+		    <div><img src="../assets/bannermusic.jpg"></div>
+		    <div><img src="../assets/Fabicon.jpg"></div>
+		    <div><img src="../assets/merch.jpg"></div>
+		  </div>
+		</div>
 	</div>
 	</div>
 
-	<style>
-		h1{
-			color:rgb(230, 85, 13);;
-			font-size: 300%;
-			text-align: center;
-		}
-		hr{
-			color:white;
-			/*padding-bottom: 5px;*/
-		}
-	</style>
-	<div class="ui vertical stripe segment">
-		<div class="ui text container">
-    			<h1> MERCH </h1>
-    	</div>
-    	<hr>
-    	<div class="ui middle aligned stackable grid container">
-    		<div class="row">
-			  <div class="your-class">
-			    <div><img src="../assets/bannermusic.jpg"></div>
-			    <div><img src="../assets/Fabicon.jpg"></div>
-			    <div><img src="../assets/merch.jpg"></div>
-			  </div>
-			</div>
-		</div>
-	</div>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
