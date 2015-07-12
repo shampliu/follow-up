@@ -1,0 +1,35 @@
+[
+	{
+		"name" : "Kanye West",
+		"photo" : "/img/assets/Artists/kanyeWest.png"
+
+	},
+	{
+		"name" : "Sam Smith",
+		"photo" : "/img/assets/Artists/samSmith.png"
+
+	},
+
+	{
+		"name" : "Kendrick Lamar",
+		"photo" : "/img/assets/Artists/kendrickLamar.png"
+	},
+	{
+		"name" : "Mumford & Sons",
+		"photo" : "/img/assets/Artists/Mumford.png"
+	},
+	{
+		"name" : "Disclosure",
+		"photo" : "/img/assets/Artists/Disclosure.png"
+	},
+
+	{
+		"name" : "Fly Lo",
+		"photo" : "/img/assets/Artists/flyingLotus.png"
+	},
+	{
+		"name" : "Soulja Boy",
+		"photo" : "/img/assets/Artists/souljaBoy.png"
+	}
+
+]
