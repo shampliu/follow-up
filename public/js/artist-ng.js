@@ -2,6 +2,12 @@ var app = angular.module('artist', []);
 
 app.controller('artistController', function($scope, $http) {
 
+    $scope.random = function() {
+      var num = Math.floor(Math.random() * 22) + 68;
+      var string = num + ' F (' + Math.floor((num - 32) * 5/9) + ' C)';
+      return string;
+    }
+
     $scope.getWeather = function(lat, lon, index) {
       var temp; 
       var caller = $(this); 
