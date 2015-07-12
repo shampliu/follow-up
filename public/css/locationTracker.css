@@ -1,5 +1,5 @@
-body{
-    background-color:#FFEDD8;
+.ui.toggle.checkbox label {
+  font-size: 30px;
 }
 
 .onoffswitch {
