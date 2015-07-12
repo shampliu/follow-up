@@ -1,5 +1,6 @@
 var url = process.env.MONGOLAB_URI
 
 module.exports = {
-    db : url
+    db : url,
+    sessionSecret : 'thisisasecret'
 }

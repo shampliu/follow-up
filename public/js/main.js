@@ -65,7 +65,6 @@ var arcOver = d3.svg.arc()
 ///////////////////////////////////////////////////////////
 // GENERATE FAKE DATA /////////////////////////////////////
 ///////////////////////////////////////////////////////////
-
 var data;
 
 
@@ -148,7 +147,6 @@ function update(number) {
         window.location.href = "/artist/" + d.name;
 
       })
-
       .on("mousemove",function(d, i){
         var percentage = (d.value/sliceProportion)*100;
 
@@ -167,8 +165,8 @@ function update(number) {
           .style("top", (d3.event.pageY-10) + "px")
           .style("opacity", 1)
           .style("display","block")
-        .center-circle
-          .style(d.data["artist"])    //CHANGED HERE
+        // .center-circle
+        //   .style(d.data["artist"])    //CHANGED HERE
       })
       .on("mouseover", function(d) {
                     d3.select(this).transition()
@@ -184,41 +182,42 @@ function update(number) {
                        .attr("d", arc);
         });
 
-    ///////////////////////////////////////////////////////////
-    // LEGEND /////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////
+  var legend = vis.selectAll('.legend')
+    .data(color.domain())
+    .enter()
+    .append('g')
+    .attr('class', 'legend')
+    .attr('transform', function(d, i) {
+      var height = legendRectSize + legendSpacing;
+      var offset =  height * color.domain().length / 2;
+      // var horz = -2 * legendRectSize;
+      var horz = 0;
+      var vert = i * height - offset + 100;
+      return 'translate(' + horz + ',' + vert + ')';
+    });
 
-    var legend = vis.selectAll('.legend')
-      .data(color.domain())
-      .enter()
-      .append('g')
-      .attr('class', 'legend')
-      .attr('transform', function(d, i) {
-        var height = legendRectSize + legendSpacing;
-        var offset =  height * color.domain().length / 2;
-        // var horz = -2 * legendRectSize;
-        var horz = 0;
-        var vert = i * height - offset + 100;
-        return 'translate(' + horz + ',' + vert + ')';
-      });
+  legend.append('rect')
+    .attr('width', legendRectSize)
+    .attr('height', legendRectSize)
+    // .style('fill', function() {
+    //   console.log(color);
+    //   return color; 
+    // })
+    .style('fill', color)
+    .style('stroke', color);
 
-    legend.append('rect')
-      .attr('width', legendRectSize)
-      .attr('height', legendRectSize)
-      // .style('fill', function() {
-      //   console.log(color);
-      //   return color; 
-      // })
-      .style('fill', color)
-      .style('stroke', color);
+  legend.append('text')
+    .attr('x', legendRectSize + legendSpacing)
+    .attr('y', legendRectSize - legendSpacing)
+    .text(function(d) { 
+      // console.log(dataStructure[0].data[d]["artist"]);
+      console.log('D = ' + d);
+      return dataStructure[number].data[d]["artist"];
+      console.log('TEXT ATTRIBUTES HERE');
+      console.log(dataStructure[number].data[d]["artist"]);
+    });
 
-    legend.append('text')
-      .attr('x', legendRectSize + legendSpacing)
-      .attr('y', legendRectSize - legendSpacing)
-      .text(function(d) { 
-        console.log(dataStructure[0].data[d]["artist"]);
-        return dataStructure[0].data[d]["artist"];
-      });
+    
     
 }
 
@@ -287,7 +286,9 @@ $( "#slider" ).slider({
     step: 1,
     slide: function( event, ui ) {
       update(ui.value);
-      // console.log(ui.value);
+      console.log(ui.value);
+
+      
     }
 })
 
