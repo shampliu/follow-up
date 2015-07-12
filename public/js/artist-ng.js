@@ -2,7 +2,13 @@ var app = angular.module('artist', []);
 
 app.controller('artistController', function($scope, $http) {
 
-    $scope.getWeather = function(lat, lon) {
+    $scope.random = function() {
+      var num = Math.floor(Math.random() * 22) + 68;
+      var string = num + ' F (' + Math.floor((num - 32) * 5/9) + ' C)';
+      return string;
+    }
+
+    $scope.getWeather = function(lat, lon, index) {
       var temp; 
       var caller = $(this); 
       
@@ -26,10 +32,11 @@ app.controller('artistController', function($scope, $http) {
                 dataType : "jsonp",
                 success : function(parsed_json) {
                   var location = parsed_json['location']['city'];
-                  temp = parsed_json['current_observation']['temp_f'];
-                  console.log('= TEMP WITHIN AJAX = ' + temp);
+                  temp = parsed_json['current_observation']['temperature_string'];
 
                   console.log('THIS');
+                  var ind = '#' + index; 
+                  $(ind).html(temp);
                   // $(caller).html('HI THERE');
                   // $(caller).innerHTML('hi');
                   // alert("Current temperature in " + location + " is: " + temp_f);

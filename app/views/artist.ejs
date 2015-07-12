@@ -46,6 +46,7 @@
     		/*padding-bottom: 5px;*/
     	}
     	.ui.secondary.menu a.item:hover {
+    		color: white;
     		background: rgba(226, 65, 43, 0.16);
     	}
     	div.content {
@@ -66,7 +67,8 @@
 		      &nbsp; Follow Up
 		    </div>
 		    <a href="/" class="item">Home</a>
-		    <a href="/main" class="item">Stats</a>
+		    <a href="/main" class="item">My Stats</a>
+		    <a href="/festival" class="item">Festival</a>
 		    <div class="right menu">
 		      <div class="ui item">
 		        {{ user.fb.displayName }}
@@ -179,10 +181,14 @@
 
 			  </div>
 			  <div class="item">
-			    <i class="linkify icon"></i>
+			    <i class="cloud icon"></i>
 			    <div class="content">
-			      {{ getWeather(event.venue.location["geo:point"]["geo:lat"], event.venue.location["geo:point"]["geo:long"]) }} F
+			    	{{ random() }}
 			    </div>
+			    <!-- <div class="content" id="{{$index}}">
+			      {{ getWeather(event.venue.location["geo:point"]["geo:lat"], event.venue.location["geo:point"]["geo:long"], $index) }} F
+			    	
+			    </div> -->
 			  </div>
 			  <div class="item">
 			    <i class="users icon"></i>

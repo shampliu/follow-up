@@ -98,6 +98,7 @@ module.exports = function(app) {
 
 	  });
 
+
 	
 
 	app.get('/main', function(req, res) {
@@ -110,6 +111,10 @@ module.exports = function(app) {
 		// }
 	});
 
+	app.get('/festival', function(req, res) {
+		res.render('festival.ejs');
+		
+	})
 	
 	app.get('/artist/:name', function(req, res) {
 		// res.send('hi!' + req.params.name);
