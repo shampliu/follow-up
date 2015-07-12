@@ -24,7 +24,8 @@
 
     <style>
     	body{
-    		background-color:black;
+    		/*color:white;
+    		background-color:black;*/
     	}
     	h1{
     		color:white;
@@ -35,24 +36,8 @@
 
 </head>
 <body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist); getEvents(artist);">
-	<div class="ui left aligned stackable grid container">
-    	<div class="row">
-    		<div class="three wide left column">
-    			<img src="../assets/sam smith.png">
-    		</div>
-    		<div class="thirteen wide left floated column">
-    			<img src="../assets/Sam.png">
-    		</div>
-
-			<!-- <div class="ui text container">
-				<h1>{{ artist }}</h1>
-			</div> -->
-    	</div>
-	</div>
+	
 	<div id="banner-container">
-
-		
-
 
 		<div class="ui borderless secondary menu">
 		  <div class="ui text container navbar">
@@ -72,8 +57,13 @@
 	</div>
 	
 	<h2 class="ui center aligned icon header" style="margin-top:75px; margin-bottom: 30px;">
-	  <i class="circular users icon"></i>
-	  {{ artist }}
+		<!-- <img src="../img/assets/sam smith.png" style="height:200px; width: 200px;"> -->
+	  <!-- <i class="circular users icon"></i> -->
+	  <div class="three wide left column">
+			<img src="../img/assets/sam smith.png">
+		</div>
+
+	  <h1 style="text-align: center; margin-top: -50px;">{{ artist }}</h1>
 	</h2>
 
 	<div class="ui text container">
