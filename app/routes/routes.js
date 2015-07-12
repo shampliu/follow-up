@@ -98,6 +98,10 @@ module.exports = function(app) {
 	  });
 
 	app.get('/artist/:name', function(req, res) {
+		// res.send('hi!' + req.params.name);
+		res.render('artist.ejs', {
+			artist: req.params.name
+		})
 
 
 	})

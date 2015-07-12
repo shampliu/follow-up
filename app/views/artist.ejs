@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="artist">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Follow Up</title>
+    <!-- <link rel="shortcut icon" href="img/logo.png"> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="/lib/semantic-ui/dist/semantic.min.css">
+    <script src="/js/artist-ng.js"></script>
+
+
+</head>
+<body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist);">
+	
+	<div class="ui text container">
+		<h1>{{ artist }}</h1>
+	</div>
+
+</body>
+
+</html>

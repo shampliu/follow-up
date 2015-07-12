@@ -143,6 +143,11 @@ function update(number) {
         .attrTween("d", removePieTween)
       .remove();
     paths
+      .on("click", function(d) {
+        window.location.href = "/artist/" + d.name;
+
+      })
+
       .on("mousemove",function(d, i){
         var percentage = (d.value/sliceProportion)*100;
 
