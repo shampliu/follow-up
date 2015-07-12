@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="main">
+<html ng-app="festival">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="lib/semantic-ui/dist/semantic.min.css">
     <link rel="stylesheet" href="css/masterStyle.css">
-    <script src="js/main.js"></script>
-    <script src="js/main-ng.js"></script>
+    <script type="text/javascript" src="js/festival-ng.js"></script>
     <style>
     body {
     	background: rgba(255, 237, 216, 0.22);
@@ -34,7 +33,7 @@
     </style>
 
 </head>
-<body ng-controller="mainController">
+<body ng-controller="festivalController">
 	<!-- <div id="center-circle" style="width:180px; height:180px; background-image:url(../assets/kendrickLamar.png); border-radius: 100px; position: absolute; top: 303px; left:525px;"></div> -->
 	<div id="banner-container">
 
@@ -47,7 +46,7 @@
 		      <img class="logo" src="img/assets/Logos/logo.png">
 		      &nbsp; Follow Up
 		    </div>
-		    <a href="#" class="item">Home</a>
+		    <a href="/" class="item">Home</a>
 		    <a href="/main" class="item">My Stats</a>
 		    <a href="/festival" class="item">Overall Stats</a>
 		    <div class="right menu">
@@ -59,14 +58,6 @@
 		</div>
 	</div>
 	<div class="ui text container">
-		<h1 style="display: inline-block; margin-right: 10px; font-size: 3em;">Festival Stats</h1> 
-		<!-- <button type="submit" class="ui labeled tiny icon button" style="top:-12px;">
-		  <i class="chevron right icon"></i>
-		  See Overall Stats
-		</button> -->
-		<div id="chart"></div>
-		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-		<div id="slider" style="width:600px;margin-left:auto;margin-right:auto;margin-top:0px;"></div>
 	</div>
 
 </body>
