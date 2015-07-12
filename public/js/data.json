@@ -2,20 +2,20 @@
    {
       "data": [
       {
-        "artist":"Kanye West",
+        "artist":"Lindsey Sitrling",
         "time":110
       },
       {
-        "artist":"Sam Smith",
-        "time":8082
+        "artist":"Mumford & Sons",
+        "time":2384
       },
       {
-        "artist": "Elton John",
-        "time": 916
+        "artist":"RL Grime",
+        "time":7951
       },
       {
-        "artist":"Kendrick Lamar",
-        "time":4222
+        "artist":"Porter Robinson",
+        "time":3951
       },
       {
         "artist":"Other",
@@ -27,41 +27,38 @@
   {
      "data": [
       {
-        "artist":"Kanye West",
-        "time":116
+        "artist":"The Black Keys",
+        "time":510
       },
       {
-        "artist":"RL Grime",
-        "time":7951
+        "artist":"Geazy",
+        "time":1160
       },
       {
-        "artist": "ODESZA",
-        "time":848
+        "artist":"Classixx",
+        "time":360
       },
       {
-        "artist":"Mumford & Sons",
-        "time":2384
+        "artist":"Kendrick Lamar",
+        "time":4222
       }
+
     ],
      "day":"2"
    },
    {
      "data": [
       {
-        "artist":"Kanye West",
-        "time":107
+        "artist":"Sam Smith",
+        "time":8082
       },
       {
-        "artist":"Disclosure",
-        "time":7777
+        "artist": "Elton John",
+        "time": 916
       },
       {
-        "artist": "Soulja Boy",
-        "time":817
-      },
-      {
-        "artist":"Fly Lo",
-        "time":1945
+        "artist": "ODESZA",
+        "time":848
       }
     ],
     "day":"3"

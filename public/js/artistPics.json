@@ -1,15 +1,26 @@
 [
 	{
-		"name" : "Kanye West",
-		"photo" : "/img/assets/Artists/kanyeWest.png"
-
+		"name" : "The Black Keys",
+		"photo" : "/img/assets/Artists/blackKeys.png"
 	},
 	{
 		"name" : "Sam Smith",
 		"photo" : "/img/assets/Artists/samSmith.png"
 
 	},
+	{
+		"name" : "Classixx",
+		"photo" : "/img/assets/Artists/Classixx.png"
 
+	},
+	{
+		"name" : "Lindsey Stirling",
+		"photo" : "/img/assets/Artists/lindseyStirling.png"
+	},
+	{
+		"name" : "Geazy",
+		"photo" : "/img/assets/Artists/geazy.png"
+	},
 	{
 		"name" : "Kendrick Lamar",
 		"photo" : "/img/assets/Artists/kendrickLamar.png"
@@ -19,17 +30,22 @@
 		"photo" : "/img/assets/Artists/Mumford.png"
 	},
 	{
-		"name" : "Disclosure",
-		"photo" : "/img/assets/Artists/Disclosure.png"
+		"name" : "ODESZA",
+		"photo" : "/img/assets/Artists/Odesza.png"
+	},
+	{
+		"name" : "Elton John",
+		"photo" : "/img/assets/Artists/eltonJohn.png"
+	},
+	{
+		"name" : "RL Grime",
+		"photo" : "/img/assets/Artists/rlGrime.png"
 	},
 
 	{
-		"name" : "Fly Lo",
-		"photo" : "/img/assets/Artists/flyingLotus.png"
-	},
-	{
-		"name" : "Soulja Boy",
-		"photo" : "/img/assets/Artists/souljaBoy.png"
+		"name" : "Porter Robinson",
+		"photo" : "/img/assets/Artists/porterRobinson.png"
 	}
+
 
 ]
