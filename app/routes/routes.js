@@ -97,7 +97,7 @@ module.exports = function(app) {
 
 	  });
 
-	app.get('/artist/:id', function(req, res) {
+	app.get('/artist/:name', function(req, res) {
 
 
 	})
