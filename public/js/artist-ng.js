@@ -30,7 +30,7 @@ app.controller('artistController', function($scope, $http) {
                   console.log('= TEMP WITHIN AJAX = ' + temp);
 
                   console.log('THIS');
-                  console.log(caller);
+                  // $(caller).html('HI THERE');
                   // $(caller).innerHTML('hi');
                   // alert("Current temperature in " + location + " is: " + temp_f);
                   // return temp_f; 
@@ -57,6 +57,21 @@ app.controller('artistController', function($scope, $http) {
 
     $scope.toPercent = function(n) {
         return (Math.floor(n * 100)); 
+    }
+
+    $scope.getPicture = function(artist) {
+      var url = "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=" + $scope.artist + "&api_key=171fb2e2186bd06117e222884676d2b4&format=json"
+      console.log('ODESZA HERE' + url);
+      $http.get(url)
+          .success(function(data) {
+              console.log("= SIMILAR ARTIST DATA IS HERE")
+              console.log(data);
+              $scope.picture = data.results.artistmatches.artist[0].image[3]['#text']; 
+          })
+          .error(function(data) {
+              console.log('Error: ' + data);
+          });
+
     }
 
     $scope.getSimilar = function(artist) {

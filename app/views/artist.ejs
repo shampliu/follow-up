@@ -55,7 +55,7 @@
 
 </head>
 
-<body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist); getEvents(artist);">
+<body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist); getEvents(artist); getPicture(artist);">
 	
 	<div id="banner-container">
 
@@ -79,11 +79,9 @@
 	<h2 class="ui center aligned icon header" style="margin-bottom: 30px;">
 		<!-- <img src="../img/assets/sam smith.png" style="height:200px; width: 200px;"> -->
 	  <!-- <i class="circular users icon"></i> -->
-	  <div class="three wide left column">
-			<img src="../img/assets/Artists/samSmith.png">
-		</div>
+		<div style="height: 250px; width: 250px; background: url('{{ picture }}'); margin: 0 auto; border-radius: 125px;"></div>
 
-	  <h1 style="text-align: center; margin-top: -50px;">{{ artist }}</h1>
+	  <h1 style="text-align: center; margin-top: -20px;">{{ artist }}</h1>
 	</h2>
 
 	<div class="ui text container" id="main-container">
