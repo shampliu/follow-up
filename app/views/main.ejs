@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Follow Up</title>
-    <link rel="shortcut icon" href="img/assets/logo.png">
+    <!-- <link rel="shortcut icon" href="img/logo.png"> -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
+
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="lib/semantic-ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/masterStyle.css">
     <script src="js/main.js"></script>
     <script src="js/main-ng.js"></script>
     <style>
@@ -20,32 +23,42 @@
     	background: rgba(255, 237, 216, 0.22);
       /*background: rgb(248, 237, 223);;*/
     }
-    </style>
+    h1 {
+    	color: rgb(230, 85, 13);
 
+    }
+    </style>
 
 </head>
 <body ng-controller="mainController">
 	<!-- <div id="center-circle" style="width:180px; height:180px; background-image:url(../assets/kendrickLamar.png); border-radius: 100px; position: absolute; top: 303px; left:525px;"></div> -->
 	<div id="banner-container">
 
+		
+
+
 		<div class="ui borderless secondary menu">
 		  <div class="ui text container navbar">
 		    <div href="#" class="header item">
-		      <img class="logo" src="img/assets/logo.png">
+		      <img class="logo" src="img/assets/Logos/logo.png">
 		      &nbsp; Follow Up
 		    </div>
 		    <a href="#" class="item">Home</a>
 		    <a href="#" class="item">Stats</a>
 		    <div class="right menu">
 		      <div class="ui item">
-		        {{ user.fb.displayName }}
+		        User Name
 		      </div>
 		    </div>
 		  </div>
 		</div>
 	</div>
 	<div class="ui text container">
-		<h1>Stats</h1>
+		<h1 style="display: inline-block; margin-right: 10px; font-size: 3em;">Festival Stats</h1> 
+		<button type="submit" class="ui labeled tiny icon button" style="top:-12px;">
+		  <i class="chevron right icon"></i>
+		  See Overall Stats
+		</button>
 		<div id="chart"></div>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<div id="slider" style="width:600px;margin-left:auto;margin-right:auto;margin-top:20px;"></div>

@@ -3,6 +3,10 @@ var app = angular.module('artist', []);
 app.controller('artistController', function($scope, $http) {
     // var artist = $scope.artist;
 
+    $scope.getDate = function(date) {
+        return moment(date).fromNow(); 
+    }
+
     $http.get('../api/loginInfo')
         .success(function(data) {
             console.log('= LOGIN INFO');

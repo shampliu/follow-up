@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Follow Up</title>
-    <link rel="shortcut icon" href="/img/assets/logo.png">
+    <link rel="shortcut icon" href="/img/assets/Logos/logo.png">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/item.min.css">
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/card.min.css">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/artist.css">
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="/lib/semantic-ui/dist/semantic.min.css">
     <script src="/js/artist-ng.js"></script>
@@ -20,6 +21,7 @@
     <!--FOR CAROUSEL --> 
     <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
   	<link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
+  	<script src="/lib/moment/min/moment.min.js"></script>
   	<script src="/js/script.js"></script>
 
     <style>
@@ -43,9 +45,19 @@
     		color:white;
     		/*padding-bottom: 5px;*/
     	}
+    	.ui.secondary.menu a.item:hover {
+    		background: rgba(226, 65, 43, 0.16);
+    	}
+    	div.content {
+    		color: rgb(75, 67, 67);
+    	}
     </style>
 
+
+  	<link rel="stylesheet" href="css/masterStyle.css">
+
 </head>
+
 <body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist); getEvents(artist);">
 	
 	<div id="banner-container">
@@ -53,7 +65,7 @@
 		<div class="ui borderless secondary menu">
 		  <div class="ui text container navbar">
 		    <div href="#" class="header item">
-		      <img class="logo" src="/img/assets/logo.png">
+		      <img class="logo" src="/img/assets/Logos/logo.png">
 		      &nbsp; Follow Up
 		    </div>
 		    <a href="/" class="item">Home</a>
@@ -67,11 +79,11 @@
 		</div>
 	</div>
 	
-	<h2 class="ui center aligned icon header" style="margin-top:75px; margin-bottom: 30px;">
+	<h2 class="ui center aligned icon header" style="margin-bottom: 30px;">
 		<!-- <img src="../img/assets/sam smith.png" style="height:200px; width: 200px;"> -->
 	  <!-- <i class="circular users icon"></i> -->
 	  <div class="three wide left column">
-			<img src="../img/assets/sam smith.png">
+			<img src="../img/assets/Artists/samSmith.png">
 		</div>
 
 	  <h1 style="text-align: center; margin-top: -50px;">{{ artist }}</h1>
@@ -92,7 +104,7 @@
 		  <!-- <img src="/images/icons/plugin.png"> -->
 		  <div class="content">
 		    Upcoming Events
-		    <div class="sub header"></div>
+		    <div class="sub header">Follow up and see this person in other venues!</div>
 		  </div>
 		</h2>
 		<div class="ui">
@@ -106,7 +118,7 @@
 				<div class="item">
 				  <i class="alarm outline icon"></i>
 				  <div class="content">
-				    {{ event.startDate }}
+				    {{ getDate(event.startDate) }}
 				  </div>
 				</div>
 				<div class="item">
@@ -118,7 +130,7 @@
 			  <div class="item">
 			    <i class="users icon"></i>
 			    <div class="content">
-			    	<button class="ui small button" style="padding: 6px; margin-right: 4px; margin-bottom: 5px;" ng-repeat="person in event.artists.artist | limitTo: 10;">
+			    	<button class="ui small button" style="padding: 6px; margin-right: 4px; margin-bottom: 5px; background-color: rgba(235, 139, 125, 0.16);" ng-repeat="person in event.artists.artist | limitTo: 10;">
 			    	  {{ person }}
 			    	</button>
 			      
@@ -134,21 +146,21 @@
 		</div>
   	<!-- <h2 class="ui header">
   		<i class="shop icon"></i>
-  	  <!-- <img src="/images/icons/plugin.png"> -->
+  	  <!-- <img src="/images/icons/plugin.png">
   	  <div class="content">
   	    Merchandise
   	    <div class="sub header"></div>
   	  </div>
-  	</h2> -->
+  	</h2> 
   	<div class="ui middle aligned stackable grid container">
   		<div class="row">
 			  <div class="your-class">
-			    <div><img src="../assets/bannermusic.jpg"></div>
-			    <div><img src="../assets/Fabicon.jpg"></div>
-			    <div><img src="../assets/merch.jpg"></div>
+			    <div><img src="../img/assets/Merch/china1.png"></div>
+			    <div><img src="../img/assets/Merch/china2.png"></div>
+			    <div><img src="../img/assets/Merch/china3.png"></div>
 			  </div>
 			</div>
-		</div>
+		</div> -->
 		<h2 class="ui header">
 			<i class="idea icon"></i>
 		  <!-- <img src="/images/icons/plugin.png"> -->
@@ -174,6 +186,7 @@
 		  </div>		  
 		</div>
 	</div>
+
 
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

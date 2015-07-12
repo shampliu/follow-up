@@ -1,11 +1,9 @@
-
-
 #banner-container {
   background: url('http://www.upout.com/blog/wp-content/uploads/1499425_10152606132171148_9145506769849243638_n.jpg?59c182');
   /*background-size: cover;*/
   /*background-attachment: fixed;*/
   padding-top: 4em;
-  margin-bottom:45px;
+  margin-bottom:60px;
 
 }
 .ui.text.container {
@@ -43,11 +41,12 @@ div.ui.borderless.main.menu {
 
 // end semantic
 
-body {
+body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   position: relative;
   font-weight: 300;
+  background-color: black;
 }
 
 .legend {
@@ -104,19 +103,22 @@ rect {
 .tooltip {
   position: absolute;
   /*width: 100px; */
-  height: 40px;
-  padding: 6px;
+  height: 60px;
+  padding: 10px;
   font: 12px sans-serif;
   /*background: green; */
-  background: rgba(255, 255, 255, 0.5);
+  /*background: rgba(255, 255, 255, 0.5);*/
+  background: rgba(255, 187, 153, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.2);
   /*border-radius: 8px;*/
-  color: black;
+  /*color: black;*/
+  color: rgb(80, 68, 62);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   opacity: 0;
 }
 
 .tooltip .left {
+  font-size: 1.4em;
   display: inline-block;
   float: left;
   padding-right: 5px;
@@ -124,7 +126,8 @@ rect {
 }
 
 .tooltip .right {
-  font-size: 2em;
+  color: rgb(230, 85, 13);
+  font-size: 3.4em;
   padding-left: 5px;
   display: inline-block;
   float: right;

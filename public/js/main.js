@@ -102,10 +102,10 @@ var center_group = vis.append("svg:g")
 ///////////////////////////////////////////////////////////
 
 //WHITE CIRCLE BEHIND LABELS
-var whiteCircle = center_group.append("svg:circle")
-  .attr("fill", "white")
-  .attr("r", ir)
-  .style.backgroundImage = "url('assets/geazy.jpg')";
+// var whiteCircle = center_group.append("svg:circle")
+//   .attr("fill", "white")
+//   .attr("r", ir)
+//   .style.backgroundImage = "url('assets/geazy.jpg')";
 
 // to run each time data is generated
 function update(number) {
