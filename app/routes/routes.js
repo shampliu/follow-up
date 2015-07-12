@@ -8,8 +8,18 @@ var passport = require('passport'),
 var User = mongoose.model('User');
 
 
+
 // Define the routes module' method
 module.exports = function(app) {
+	var Gracenote = require("node-gracenote");
+	var clientId = "713984";
+	var clientTag = "6284A0B7013D83EC0C76E06CEDA2D2A2";
+	var userId = "280161755755239257-279103D3E8992B2660A9AD29E5CD5401";
+
+	var api = new Gracenote(clientId,clientTag,userId);
+	api.register(function(err, uid) {
+	    // store this somewhere for the next session
+	});
 
 	passport.serializeUser(function(user, done) {
 	  done(null, user);
@@ -34,7 +44,6 @@ module.exports = function(app) {
 	    enableProof: false
 	  },
 	  function(accessToken, refreshToken, profile, done) {
-	  	console.log(profile);
 	  	User.findOne({ 'fb.id': profile.id }, function (err, user) {
 	  		if (err) {
 	  			return next(err); 	
@@ -43,7 +52,8 @@ module.exports = function(app) {
 	  			if (! user) {
 	  				var newUser = new User({
 	  					fb : profile,
-	  					accessToken : accessToken
+	  					accessToken : accessToken,
+	  					data : []
 	  				});
 	  				
 	  				newUser.save(function(err) {
@@ -99,6 +109,20 @@ module.exports = function(app) {
 
 	app.get('/artist/:name', function(req, res) {
 		// res.send('hi!' + req.params.name);
+		// api.searchTrack("Kings of Leon", "Only by the Night", "Sex on fire", function(err, result) {
+		//     // Search Result as array
+		//     console.log('TRACK FOUND');
+		//     console.log(result);
+		// });
+		api.searchTrack("Kings of Leon", "Only by the Night", "Sex on fire", function(err, result) {
+		    // Search Result as array
+		    // console.log('TRACK FOUND');
+		    // console.log(result);
+		});
+		api.searchArtist(req.params.name, function(result) {
+			console.log(result);
+		    // Search Result as array
+		});
 		res.render('artist.ejs', {
 			artist: req.params.name
 		})

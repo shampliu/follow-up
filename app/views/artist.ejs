@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Follow Up</title>
-    <!-- <link rel="shortcut icon" href="img/logo.png"> -->
+    <link rel="shortcut icon" href="/img/assets/logo.png">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/item.min.css">
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/card.min.css">
     <link rel="stylesheet" type="text/css" href="/lib/semantic-ui/dist/components/grid.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="/lib/semantic-ui/dist/semantic.min.css">
     <script src="/js/artist-ng.js"></script>
@@ -19,11 +20,58 @@
 
 </head>
 <body ng-controller="artistController" ng-init="artist = <%= JSON.stringify(artist) %>; getSimilar(artist);">
-	
-	<div class="ui text container">
-		<h1>{{ artist }}</h1>
+	<div id="banner-container">
+
+		
+
+
+		<div class="ui borderless secondary menu">
+		  <div class="ui text container navbar">
+		    <div href="#" class="header item">
+		      <img class="logo" src="/img/assets/logo.png">
+		      &nbsp; Follow Up
+		    </div>
+		    <a href="/" class="item">Home</a>
+		    <a href="/main" class="item">Stats</a>
+		    <div class="right menu">
+		      <div class="ui item">
+		        {{ user.fb.displayName }}
+		      </div>
+		    </div>
+		  </div>
+		</div>
 	</div>
+	
+	<h2 class="ui center aligned icon header">
+	  <i class="circular users icon"></i>
+	  {{ artist }}
+	</h2>
+
 	<div class="ui text container">
+		<h2 class="ui header">
+			<i class="sound icon"></i>
+		  <!-- <img src="/images/icons/plugin.png"> -->
+		  <div class="content">
+		    Discography
+		    <div class="sub header"></div>
+		  </div>
+		</h2>
+		<h2 class="ui header">
+			<i class="calendar icon"></i>
+		  <!-- <img src="/images/icons/plugin.png"> -->
+		  <div class="content">
+		    Upcoming Events
+		    <div class="sub header"></div>
+		  </div>
+		</h2>
+		<h2 class="ui header">
+			<i class="idea icon"></i>
+		  <!-- <img src="/images/icons/plugin.png"> -->
+		  <div class="content">
+		    Artist Recommendations
+		    <div class="sub header">Check out similar artists who might fit your taste</div>
+		  </div>
+		</h2>
 		<div class="ui link three cards" >
 		  <div class="card" ng-repeat="person in similarArtists.similarartists.artist | limitTo: 9">
 		    <a href="http://{{ person.url }}" class="image" style="overflow:hidden;">
