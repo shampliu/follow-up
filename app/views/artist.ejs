@@ -124,27 +124,13 @@
 			      {{ event.venue.location.city }}, {{ event.venue.location.country }}
 			    </div>
 
-			    <!-- SCRIPT TO GET WEATHER: need way to get city and state and concatenate into url to get result-->
 
-			    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-				<script>
-					jQuery(document).ready(function($) {
-					  $.ajax({
-					  var loc={{event.venue.location.city}};
-					  console.log(loc);
-					  //var c={{event.venue.location.city}};
-					  //url: "http://api.wunderground.com/api/c33cff0e71aab1f4/geolookup/conditions/q/"+loc+"/"+c+".json",
-					  url : "http://api.wunderground.com/api/c33cff0e71aab1f4/geolookup/conditions/q/CA/San_Francisco.json",
-					  dataType : "jsonp",
-					  success : function(parsed_json) {
-					  var location = parsed_json['location']['city'];
-					  var temp_f = parsed_json['current_observation']['temp_f'];
-					  alert("Current temperature in " + location + " is: " + temp_f +"F");
-					  }
-					  });
-				});
-				</script>
-
+			  </div>
+			  <div class="item">
+			    <i class="linkify icon"></i>
+			    <div class="content">
+			      {{ getWeather(event.venue.location["geo:point"]["geo:lat"], event.venue.location["geo:point"]["geo:long"]) }} F
+			    </div>
 			  </div>
 			  <div class="item">
 			    <i class="users icon"></i>
@@ -211,6 +197,23 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="/js/slick.min.js"></script>
+    <!-- SCRIPT TO GET WEATHER: need way to get city and state and concatenate into url to get result-->
+<script>
+// 	jQuery(document).ready(function($) {
+// 	  $.ajax({
+// 	  var loc={{event.venue.location.state}};
+// 	  //var c={{event.venue.location.city}};
+// 	  //url: "http://api.wunderground.com/api/c33cff0e71aab1f4/geolookup/conditions/q/"+loc+"/"+c+".json",
+// 	  url : "http://api.wunderground.com/api/c33cff0e71aab1f4/geolookup/conditions/q/CA/San_Francisco.json",
+// 	  dataType : "jsonp",
+// 	  success : function(parsed_json) {
+// 	  var location = parsed_json['location']['city'];
+// 	  var temp_f = parsed_json['current_observation']['temp_f'];
+// 	  alert("Current temperature in " + location + " is: " + temp_f +"F");
+// 	  }
+// 	  });
+// });
+</script>
 
 
 </body>

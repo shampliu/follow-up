@@ -1,6 +1,44 @@
 var app = angular.module('artist', []);
 
 app.controller('artistController', function($scope, $http) {
+
+    $scope.getWeather = function(lat, lon) {
+      var temp; 
+      var caller = $(this); 
+      
+      var url1 = "http://api.wunderground.com/api/c33cff0e71aab1f4/geolookup/q/" + lat + "," + lon + ".json";
+      $.ajax({
+       url : url1,
+       dataType : "jsonp",
+       success : function(data) {
+        console.log(data);
+           var state = data.location.state;
+           var city = data.location.city;
+           // var state = "CA";
+           // var city = "Foster City";
+           console.log("state = " + state);
+           console.log("city = " + city);
+           var url2 = "http://api.wunderground.com/api/c33cff0e71aab1f4/geolookup/conditions/q/" + state + "/" + city + ".json"; 
+           console.log(url2);
+
+           $.ajax({
+                url : url2,
+                dataType : "jsonp",
+                success : function(parsed_json) {
+                  var location = parsed_json['location']['city'];
+                  temp = parsed_json['current_observation']['temp_f'];
+                  console.log('= TEMP WITHIN AJAX = ' + temp);
+
+                  console.log('THIS');
+                  console.log(caller);
+                  // $(caller).innerHTML('hi');
+                  // alert("Current temperature in " + location + " is: " + temp_f);
+                  // return temp_f; 
+                }
+            });
+       }
+      });
+    }
     // var artist = $scope.artist;
 
     $scope.getDate = function(date) {
