@@ -1,11 +1,12 @@
 
 
 #banner-container {
-  background: url('https://download.unsplash.com/photo-1428263197823-ce6a8620d1e1');
+  background: url('../assets/bannermusic.jpg');
   background-size: cover;
   background-attachment: fixed;
   padding-top: 4em;
   margin-bottom:45px;
+
 }
 .ui.text.container {
   max-width: 950px !important;
